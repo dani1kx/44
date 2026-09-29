@@ -1,13 +1,11 @@
-import type { loader } from '@/root'
 import routes from '@/routes'
-import { usePreservedLoaderData } from '@joycostudio/transitions'
 import { Link } from 'react-router'
 
 export const Header = () => {
-  const { mediaLinks } = usePreservedLoaderData<typeof loader>()
+  const mediaLinks = [{ label: 'x', link: 'https://x.com/joyco_studio' }, { label: 'instagram', link: 'https://instagram.com' }]
 
   return (
-    <header className="fixed top-0 z-50 w-full items-center justify-between grid grid-cols-3 p-2 px-4 md:py-4 h-header">
+    <header className="joyco-header fixed top-0 z-50 w-full items-center justify-between grid grid-cols-3 px-3 py-2 md:px-12 md:py-3">
       <div className="gap-3 contents">
         <Link key="logo" to="/" className="max-w-max justify-self-start">
           <img src="/logo.svg" alt="Rebels logo" className="h-4" />
