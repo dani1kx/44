@@ -1,9 +1,7 @@
-import type { loader } from '@/root'
-import { usePreservedLoaderData } from '@joycostudio/transitions'
 import { Link } from 'react-router'
 
 export default function Footer() {
-  const { rebelLog } = usePreservedLoaderData<typeof loader>()
+  const rebelLog = '[ JOYCO / BUENOS AIRES ]'
 
   return (
     <div className="flex flex-col items-center justify-center fixed bottom-4 right-4 opacity-30">
